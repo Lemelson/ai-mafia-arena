@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '../components/themes/ThemeProvider';
 import { MainMenu } from '../pages/MainMenu';
 import { PlayerLibrary } from '../pages/PlayerLibrary';
@@ -10,7 +10,7 @@ import { Settings } from '../pages/Settings';
 
 export function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ThemeProvider>
         <Routes>
           <Route path="/" element={<MainMenu />} />
@@ -22,6 +22,6 @@ export function App() {
           <Route path="/settings" element={<Settings />} />
         </Routes>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
